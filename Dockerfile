@@ -3,7 +3,9 @@ FROM babim/ubuntubase
 MAINTAINER "Duc Anh Babim" <ducanh.babim@yahoo.com>
 
 RUN apt-get clean && \
-    echo "deb http://www.artica.es/debian/squeeze /" > /etc/apt/sources.list.d/pandorafms.list
+    echo "deb http://www.artica.es/debian/squeeze /" > /etc/apt/sources.list.d/pandorafms.list && \
+    echo "deb http://ftp.us.debian.org/debian/ squeeze main non-free" >> /etc/apt/sources.list.d/pandorafms.list && \
+    echo "deb http://ftp.at.debian.org/debian-backports/ squeeze-backports main" >> /etc/apt/sources.list.d/pandorafms.list
 
 RUN apt-get update && \
     apt-get dist-upgrade -y --force-yes && \
