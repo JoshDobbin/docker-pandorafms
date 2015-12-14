@@ -3,8 +3,9 @@ FROM babim/ubuntubase
 MAINTAINER "Duc Anh Babim" <ducanh.babim@yahoo.com>
 
 RUN apt-get clean && \
-    cat "deb http://www.artica.es/debian/squeeze /" > /etc/apt/sources.list.d/pandorafms.list
-    apt-get update && \
+    echo "deb http://www.artica.es/debian/squeeze /" > /etc/apt/sources.list.d/pandorafms.list
+
+RUN apt-get update && \
     apt-get dist-upgrade -y --force-yes && \
     apt-get install pandorafms-console pandorafms-server pandorafms-agent-unix -y --force-yes && \
     apt-get clean && \
