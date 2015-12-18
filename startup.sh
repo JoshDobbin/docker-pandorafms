@@ -1,6 +1,4 @@
 #!/bin/bash
-
-
 set -e
 
 if [ -f /etc/configured ]; then
