@@ -19,3 +19,4 @@ EXPOSE 80
 
 # Use baseimage-docker's init system.
 ENV LC_ALL C.UTF-8
+ENV TZ Asia/Ho_Chi_Minh
