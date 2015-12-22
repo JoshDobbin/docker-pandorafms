@@ -21,3 +21,4 @@ EXPOSE 80
 CMD ["/usr/sbin/sshd", "-D"]
 
 ENV LC_ALL C.UTF-8
+ENV TZ Asia/Ho_Chi_Minh
