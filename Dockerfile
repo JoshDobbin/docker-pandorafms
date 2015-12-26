@@ -18,7 +18,9 @@ RUN apt-get update && \
 EXPOSE 80
 
 # Use baseimage-docker's init system.
-CMD ["/usr/sbin/sshd", "-D"]
+ADD startup.sh /startup.sh
+RUN chmod +x /startup.sh
+CMD ["/startup.sh"]
 
 ENV LC_ALL C.UTF-8
 ENV TZ Asia/Ho_Chi_Minh
