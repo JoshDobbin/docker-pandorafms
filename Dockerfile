@@ -17,6 +17,10 @@ RUN apt-get update && \
 # at that ports need to allow access from firewall if need to access it outside of the server. 
 EXPOSE 80
 
+ADD startup.sh /startup.sh
+RUN chmod +x /startup.sh
+CMD ["/startup.sh"]
+
 # Use baseimage-docker's init system.
 ENV LC_ALL C.UTF-8
 ENV TZ Asia/Ho_Chi_Minh
