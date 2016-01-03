@@ -1,7 +1,5 @@
 FROM babim/debianbase:ssh
 
-MAINTAINER "Duc Anh Babim" <ducanh.babim@yahoo.com>
-
 RUN apt-get clean && \
     echo "deb http://www.artica.es/debian/squeeze /" > /etc/apt/sources.list.d/pandorafms.list && \
     echo "deb http://ftp.us.debian.org/debian/ squeeze main non-free" >> /etc/apt/sources.list.d/pandorafms.list && \
@@ -22,5 +20,3 @@ ADD startup.sh /startup.sh
 RUN chmod +x /startup.sh
 CMD ["/startup.sh"]
 
-ENV LC_ALL C.UTF-8
-ENV TZ Asia/Ho_Chi_Minh
