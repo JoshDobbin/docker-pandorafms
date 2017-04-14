@@ -13,7 +13,7 @@ RUN apt-get update && \
 
 # to allow access from outside of the container  to the container service
 # at that ports need to allow access from firewall if need to access it outside of the server. 
-EXPOSE 80
+EXPOSE 80 41121 8022 8023
 
 ADD startup.sh /startup.sh
 RUN chmod +x /startup.sh
